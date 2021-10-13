@@ -1,0 +1,4 @@
+outs:
+- md5: bd9958fdd182589fa40eae2e69f7272a
+  size: 220186
+  path: campaign.csv
