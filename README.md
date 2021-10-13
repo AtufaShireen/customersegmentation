@@ -8,3 +8,8 @@ https://github.com/amankharwal/Website-data/blob/master/marketing_campaign.csv
 git init
 dvc init
 dvc add data_given/campaign.csv
+git add . 
+git commit -m
+git remote add origin git@github.com:AtufaShireen/customersegmentation.git
+git branch -M main
+git push -u origin main
