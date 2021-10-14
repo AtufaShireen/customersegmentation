@@ -18,6 +18,10 @@ estimators:
   KMeans:
     params:
       n_clusters: 5
+      init: "k-means++"
+      n_init: 50
+      max_iter: 500
+      random_state: 42
       
 model_dir: saved_models
 

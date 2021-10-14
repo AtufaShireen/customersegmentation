@@ -6,22 +6,25 @@ stages:
     - src/load_data.py
     - data_given/campaign.csv
     outs:
-    - data/raw/campaign.csv
-
+    - data/raw/campaign.csv 
+  # data_sanity: for extracting useful columns now do with workflow
+  #   cmd: python src/data_sanity.py --config=params.yaml
+  #   deps:
+  #   - src/get_data.py
+  #   - src/data_sanity.py
+  #   - data_given/campaign.csv
+  #   outs:
+  #   - data/raw/campaign.csv
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
-    - src/split_data.py
-    - data/raw/campaign.csv
-    outs:
-    - data/processed/rfm_scores.csv
-    - data/processed/rfm_actual.csv 
-  
-  data_sanity:
-    cmd: python src/data_sanity.py --config=params.yaml
-    deps:
-      - src/data_sanity.py
+      - src/split_data.py
       - data/raw/campaign.csv
+    outs:
+      - data/processed/rfm_scores.csv
+      - data/processed/rfm_actual.csv 
+  
+
   train_and_evaluate:
     cmd: python src/train_and_evaluate.py --config=params.yaml
     deps:
@@ -38,7 +41,11 @@ stages:
         cache: false
     outs:
     - saved_models/model.joblib
-
+  
+  retention_model:
+    cmd: python src/retention_model.py --config=params.yaml
+    deps:
+      -data/processed/rfm_actual.csv
   log_production_model:
     cmd: python src/log_production_model.py --config=params.yaml
     deps:
