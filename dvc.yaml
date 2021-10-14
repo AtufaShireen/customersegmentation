@@ -31,9 +31,6 @@ stages:
     - data/processed/rfm_scores.csv
     - data/processed/rfm_actual.csv 
     - src/train_and_evaluate.py
-    params:
-    - estimators.ElasticNet.params.alpha
-    - estimators.ElasticNet.params.l1_ratio
     metrics:
     - report/scores.json:
         cache: false
@@ -42,11 +39,11 @@ stages:
     outs:
     - saved_models/model.joblib
   
-  retention_model:
-    cmd: python src/retention_model.py --config=params.yaml
-    deps:
-      -data/processed/rfm_actual.csv
-  log_production_model:
-    cmd: python src/log_production_model.py --config=params.yaml
-    deps:
-      - src/log_production_model.py
+  # retention_model:
+  #   cmd: python src/retention_model.py --config=params.yaml
+  #   deps:
+  #     -data/processed/rfm_actual.csv
+  # log_production_model:
+  #   cmd: python src/log_production_model.py --config=params.yaml
+  #   deps:
+  #     - src/log_production_model.py
