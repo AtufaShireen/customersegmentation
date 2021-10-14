@@ -2,3 +2,8 @@ dvc
 dvc[gdrive]
 sklearn
 pandas
+pytest
+tox
+flask
+gunicorn
+mlflow

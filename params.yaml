@@ -1,26 +1,24 @@
 base:
   project: customer-segments-project
   random_state: 42
-  target_col: TARGET
+  # target_col: TARGET
 
 data_source:
-  s3_source: data_given/campaign.csv
+  s3_source: data_given/s3_bucket_campaign.csv
 
 load_data:
   raw_dataset_csv: data/raw/campaign.csv
 
 split_data:
-  train_path: data/processed/train_campaign.csv
-  test_path: data/processed/test_campaign.csv
-  test_size: 0.2
+  score_path: data/processed/rfm_scores.csv
+  actual_path: data/processed/rfm_actual.csv
+  # add quantiles
 
 estimators:
-  ElasticNet:
+  KMeans:
     params:
-      # alpha: 0.88
-      # l1_ratio: 0.89
-      alpha: 0.9
-      l1_ratio: 0.4
+      n_clusters: 5
+      
 model_dir: saved_models
 
 reports:
@@ -28,3 +26,9 @@ reports:
   scores: report/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
+mlflow_config:
+  artifacts_dir: artifacts
+  experiment_name: ElasticNet regression
+  run_name: mlops
+  registered_model_name: ElasticNetWineMOdel
+  remote_server_uri:http://0.0.0.0:1234 
