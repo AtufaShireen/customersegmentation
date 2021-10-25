@@ -5,4 +5,3 @@ description="pipeline for customer segmentation",
 author="Atufa",
 packages=find_packages(),
 license="MIT",)
- 

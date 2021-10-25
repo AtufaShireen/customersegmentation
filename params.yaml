@@ -4,7 +4,7 @@ base:
   # target_col: TARGET
 
 data_source:
-  s3_source: data_given/s3_bucket_campaign.csv
+  s3_source: data_given/campaign.csv
 
 load_data:
   raw_dataset_csv: data/raw/campaign.csv
@@ -30,9 +30,9 @@ reports:
   scores: report/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
-mlflow_config:
-  artifacts_dir: artifacts
-  experiment_name: ElasticNet regression
-  run_name: mlops
-  registered_model_name: ElasticNetWineMOdel
-  remote_server_uri:http://0.0.0.0:1234 
+# mlflow_config:
+#   artifacts_dir: artifacts
+#   experiment_name: ElasticNet regression
+#   run_name: mlops
+#   registered_model_name: ElasticNetWineMOdel
+#   remote_server_uri: http://0.0.0.0:1234 
