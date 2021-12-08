@@ -1,2 +1,10 @@
 venv
-.gitginore
+.vscode/
+.env
+*.pyc
+__pycache__/
+.idea/
+db.sqlite3
+migrations/*/
+.dvc/
+todo.txt

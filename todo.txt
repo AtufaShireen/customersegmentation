@@ -1,0 +1,22 @@
+Add utility for calculating recency,frequency,monetary by user
+Recency:
+    -def: difference of latest purchase date from today's and today's date(end of particular period)
+    -required: purchase date column,end date
+
+Frequency:
+    -def: number of purchases (add number of purchases)
+    -required: cols with number of purchases or invoice column
+
+Monetary:
+    -def: add amount of purchases
+    -required: (cols with amount )or (cols with amount and quantity)
+Dt_Customer:
+    -def: 
+    -required: date of joining
+In DVC add users uploaded data to given_data and read in mlflow
+
+----------------------To Show----------------------------
+total of r,f,m
+rfm score squareplot
+cluster piechart 
+cluster graph

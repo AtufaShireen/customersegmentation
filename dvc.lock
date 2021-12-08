@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/campaign.csv
+      md5: bd9958fdd182589fa40eae2e69f7272a
+      size: 220186
+    - path: src/get_data.py
+      md5: 65a96ba9c93667f3e5eeb8c6893a15ba
+      size: 656
+    - path: src/load_data.py
+      md5: 7c8f81bbf130cbcd79c43886cc9afd09
+      size: 611
+    outs:
+    - path: data/raw/campaign.csv
+      md5: 71d1e5331d5674b1b0b87c207e46c54b
+      size: 236067
