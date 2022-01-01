@@ -1,10 +1,7 @@
 venv
-.vscode/
-.env
-*.pyc
 __pycache__/
+.vscode/
+*.pyc
 .idea/
-db.sqlite3
-migrations/*/
-.dvc/
-todo.txt
+.env
+.*json
