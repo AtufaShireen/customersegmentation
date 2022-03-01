@@ -1,0 +1,50 @@
+{
+    "SampleFileName": "forestcover_28011992_120212.csv",
+	"LengthOfDateStampInFile": 8,
+	"LengthOfTimeStampInFile": 6,
+	"NumberofColumns" : 32,
+    "ColName": {
+        "ID":"Float",
+        "Year_Birth":"Float",
+         "Education":"String",
+          "Marital_Status":"String",
+           "Income":"Float",
+            "Kidhome":"Float",
+        "Teenhome":"Float",
+         "Dt_Customer":"Float",
+          "Recency":"Float",
+           "MntWines":"Float",
+            "MntFruits":"Float",
+        "MntMeatProducts":"Float",
+         "MntFishProducts":"Float", 
+         "MntSweetProducts":"Float",
+        "MntGoldProds":"Float",
+         "NumDealsPurchases":"Float",
+          "NumWebPurchases":"Float",
+        "NumCatalogPurchases":"Float",
+         "NumStorePurchases":"Float",
+          "NumWebVisitsMonth":"Float",
+        "AcceptedCmp3":"Float",
+         "AcceptedCmp4":"Float",
+          "AcceptedCmp5":"Float", 
+          "AcceptedCmp1":"Float",
+        "AcceptedCmp2":"Float",
+         "Complain":"Float", 
+         "Z_CostContact":"Float",
+          "Z_Revenue":"Float",
+           "Response":"Float",
+        "spent_total":"Float", 
+        "Frequency":"Float",
+         "Age":"Float"
+},
+    "RFMCols":{
+        "id_col":"ID",
+        "monetary_col":"spent_total",
+        "trans_date_col":"Dt_Customer",
+        "recency_col":"Recency",
+        "frequency_col":"Frequency",
+        "age_col":"Age"
+    }
+}
+
+

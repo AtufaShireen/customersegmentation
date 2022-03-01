@@ -1,0 +1,19 @@
+{	"SampleFileName": "cdnow_28011992_120212.csv",
+	"LengthOfDateStampInFile": 8,
+	"LengthOfTimeStampInFile": 6,
+	"NumberofColumns" : 5,
+	"ColName": {
+        "id":"integer",
+         "frequency":"float",
+         "recency":"float",
+         "T":"float",
+         "monetary_value":"float"
+},
+    "RFMCols":{
+        "id_col":"id",
+        "cal_rec":"recency",
+        "cal_freq":"frequency",
+        "cal_mon":"monetary_value",
+        "age_col":"T"
+    }
+}

@@ -1,0 +1,15 @@
+{	"SampleFileName": "forestcover_28011992_120212.csv",
+	"LengthOfDateStampInFile": 8,
+	"LengthOfTimeStampInFile": 6,
+	"NumberofColumns" : 52,
+	"ColName": {
+        "customer_id":"String",
+        "tran_amount":"float",
+        "trans_date":"String"
+},
+    "RFMCols":{
+        "id_col":"customer_id",
+        "trans_col":"tran_amount",
+        "trans_date_col":"trans_date"
+    }
+}

@@ -1,0 +1,21 @@
+{	"SampleFileName": "retail_28011992_120212.csv",
+	"LengthOfDateStampInFile": 8,
+	"LengthOfTimeStampInFile": 6,
+	"NumberofColumns" : 9,
+	"ColName": {
+        "InvoiceNo":"String",
+        "StockCode":"String",
+        "Description":"String",
+         "Quantity":"float",
+          "InvoiceDate":"String",
+       "UnitPrice":"float",
+        "CustomerID":"float",
+         "Country":"String",
+          "spent_total":"float"
+},
+    "RFMCols":{
+        "id_col":"CustomerID",
+        "trans_col":"spent_total",
+        "trans_date_col":"InvoiceDate"
+    }
+}
